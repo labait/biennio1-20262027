@@ -1,0 +1,52 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+
+      #music {
+        background-color: lightgray;
+        padding: 10px;
+        border-radius: 5px;
+      }
+      h1 {
+        color: blue;
+      }
+      .fav {
+        font-weight: bold;
+      }
+      .music {
+        text-decoration: underline;
+      }
+    </style>
+</head>
+<body>
+  <div id="music">
+    <h1>Music i like</h1>
+    <ul>
+      <li class="fav music">Rock</li>
+      <li class="music">Jazz</li>
+      <li class="music">Classical</li>
+    </ul>
+  </div>
+  <div id="movies" mood="happy">
+    <h1>Movies i like</h1>
+    <ul>
+      <li class="fav">Action</li>
+      <li class="fav">Comedy</li>
+      <li>Drama</li>
+    </ul>
+  </div>
+  
+  <script>
+    document.querySelectorAll('.fav').forEach(function(element) {
+      element.style.color = 'red';
+      element.addEventListener('click', function(event) {
+        console.log('You clicked ' + event.target.textContent);
+      });
+    });
+</script>
+</html>
